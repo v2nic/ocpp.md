@@ -47,6 +47,16 @@ Instead of a vague answer, the agent reads the docs and gives you the precise di
 
 ## What's Inside
 
+### OCPP 2.1
+
+| Content | Count | Source |
+|---------|-------|--------|
+| Message schemas (field-level) | 90 | Generated from OCA JSON schemas |
+| Shared data types (enums + composites) | 64 | Generated from OCA JSON schemas |
+| Functional blocks | 16 | Provisioning, Authorization, Transactions, Smart Charging, Bidirectional Charging, DER Control, Battery Swapping, etc. |
+| Smart charging deep-dive | TBD | Profiles, composite schedules, ISO 15118-20 V2G, worked examples |
+| Sequence diagrams | TBD | Boot, auth, transactions, V2G flows, DER control |
+
 ### OCPP 2.0.1
 
 | Content | Count | Source |
@@ -84,7 +94,7 @@ Every ambiguous area in the docs is marked:
 
 By default, the agent stops and asks. If you want it to pick reasonable defaults during prototyping, add this to your `CLAUDE.md`:
 
-```
+```.1 or 2
 For OCPP: use pragmatic escalation mode.
 ```
 

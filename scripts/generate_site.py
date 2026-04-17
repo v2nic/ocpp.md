@@ -61,6 +61,29 @@ CONTENT_FILES = [
     ("docs/OCPP-1.6J-Schemas/OCPP-1.6J-Schemas-RemoteTrigger.md", "ocpp-1.6j/schemas/remote-trigger"),
     ("docs/OCPP-1.6J-Sequences/OCPP-1.6J-Sequences.md", "ocpp-1.6j/sequences"),
     ("docs/OCPP-1.6J-SmartCharging/OCPP-1.6J-SmartCharging.md", "ocpp-1.6j/smart-charging"),
+    # OCPP 2.1
+    ("docs/OCPP-2.1.md", "ocpp-2.1"),
+    ("docs/OCPP-2.1-DataTypes.md", "ocpp-2.1/data-types"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Provisioning.md", "ocpp-2.1/schemas/provisioning"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Authorization.md", "ocpp-2.1/schemas/authorization"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Transactions.md", "ocpp-2.1/schemas/transactions"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-SmartCharging.md", "ocpp-2.1/schemas/smart-charging"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Firmware.md", "ocpp-2.1/schemas/firmware"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Security.md", "ocpp-2.1/schemas/security"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Diagnostics.md", "ocpp-2.1/schemas/diagnostics"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Availability.md", "ocpp-2.1/schemas/availability"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Reservation.md", "ocpp-2.1/schemas/reservation"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Display.md", "ocpp-2.1/schemas/display"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-BidirectionalCharging.md", "ocpp-2.1/schemas/bidirectional-charging"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-DERControl.md", "ocpp-2.1/schemas/der-control"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-BatterySwapping.md", "ocpp-2.1/schemas/battery-swapping"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-TariffsAndCost.md", "ocpp-2.1/schemas/tariffs-and-cost"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-Payment.md", "ocpp-2.1/schemas/payment"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-PeriodicEventStreams.md", "ocpp-2.1/schemas/periodic-event-streams"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-PriorityCharging.md", "ocpp-2.1/schemas/priority-charging"),
+    ("docs/OCPP-2.1-Schemas/OCPP-2.1-Schemas-FrequencyContainment.md", "ocpp-2.1/schemas/frequency-containment"),
+    ("docs/OCPP-2.1-Sequences/OCPP-2.1-Sequences.md", "ocpp-2.1/sequences"),
+    ("docs/OCPP-2.1-SmartCharging/OCPP-2.1-SmartCharging.md", "ocpp-2.1/smart-charging"),
 ]
 
 # Mapping: normalized .md source path -> clean URL path (for link rewriting)
@@ -84,6 +107,7 @@ STANDALONE_PAGES = [
 INDEX_TOC = [
     ("why-this-exists", "Why"),
     ("using-with-ai-agents", "Setup"),
+    ("ocpp-21", "2.1"),
     ("ocpp-201", "2.0.1"),
     ("ocpp-16j", "1.6J"),
     ("the-escalation-model", "Escalation"),
@@ -93,6 +117,7 @@ INDEX_TOC = [
 # Section ID overrides for the index page (markdown h2 text -> desired id)
 INDEX_HEADING_IDS = {
     "Why This Exists": "why-this-exists",
+    "OCPP 2.1": "ocpp-21",
     "OCPP 2.0.1": "ocpp-201",
     "OCPP 1.6J": "ocpp-16j",
     "The Escalation Model": "the-escalation-model",

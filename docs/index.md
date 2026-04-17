@@ -1,6 +1,6 @@
 # OCPP.md — Open Charge Point Protocol Reference
 
-> A structured OCPP reference for AI agents and developers building EV charging infrastructure. Covers **OCPP 2.0.1** and **OCPP 1.6J** with field-level message schemas, sequence diagrams, smart charging deep-dives, and explicit markers for every place the spec leaves a decision to you.
+> A structured OCPP reference for AI agents and developers building EV charging infrastructure. Covers **OCPP 2.1**, **OCPP 2.0.1**, and **OCPP 1.6J** with field-level message schemas, sequence diagrams, smart charging deep-dives, and explicit markers for every place the spec leaves a decision to you.
 >
 > Source on [GitHub](https://github.com/alexeimoisseev/ocpp.md).
 
@@ -30,6 +30,43 @@ Then use `/ocpp <topic>` to load specific reference material, or just ask OCPP-r
 ### Other Agents (Cursor, Windsurf, Copilot, etc.)
 
 Clone the repository and point your agent at the `docs/` directory. See the [AI Agent Setup Guide](./ai-agent-setup/) for detailed instructions.
+
+---
+
+## OCPP 2.1
+
+The latest version of the specification, adding bidirectional charging (V2G/V2X), DER control, battery swapping, tariff management, periodic event streams, priority charging, and frequency containment. 91 messages organized by 19 Functional Blocks (A–S). Fully backward compatible with 2.0.1.
+
+**Reference docs:**
+
+- [OCPP 2.1 Overview & Architecture](./OCPP-2.1.md) — Roles, device model, transport, message frame, all 91 messages, migration guide
+- [Shared Data Types](./OCPP-2.1-DataTypes.md) — 21 enums and 43 composite types used across messages
+
+**Schemas (field-level, generated from OCA JSON schemas):**
+
+- [Provisioning](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Provisioning.md) — BootNotification, GetVariables, SetVariables, Reset, etc.
+- [Authorization](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Authorization.md) — Authorize, SendLocalList, ClearCache
+- [Transactions](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Transactions.md) — TransactionEvent, RequestStartTransaction, MeterValues
+- [Smart Charging](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-SmartCharging.md) — SetChargingProfile, GetCompositeSchedule, dynamic schedules
+- [Bidirectional Charging](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-BidirectionalCharging.md) — NotifyAllowedEnergyTransfer
+- [DER Control](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-DERControl.md) — SetDERControl, GetDERControl, NotifyDERAlarm
+- [Battery Swapping](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-BatterySwapping.md) — BatterySwap, RequestBatterySwap
+- [Tariffs and Cost](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-TariffsAndCost.md) — SetDefaultTariff, GetTariffs, NotifySettlement
+- [Payment](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Payment.md) — NotifyWebPaymentStarted
+- [Periodic Event Streams](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-PeriodicEventStreams.md) — OpenPeriodicEventStream, ClosePeriodicEventStream
+- [Priority Charging](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-PriorityCharging.md) — NotifyPriorityCharging, UsePriorityCharging
+- [Frequency Containment](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-FrequencyContainment.md) — AFRRSignal
+- [Firmware](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Firmware.md) — UpdateFirmware, FirmwareStatusNotification
+- [Security](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Security.md) — CertificateSigned, InstallCertificate, GetCertificateChainStatus
+- [Diagnostics](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Diagnostics.md) — GetLog, NotifyEvent, SetVariableMonitoring
+- [Availability](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Availability.md) — ChangeAvailability, StatusNotification, Heartbeat
+- [Reservation](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Reservation.md) — ReserveNow, CancelReservation
+- [Display](./OCPP-2.1-Schemas/OCPP-2.1-Schemas-Display.md) — SetDisplayMessage, CostUpdated
+
+**Behavioral docs:**
+
+- [Core Sequences](./OCPP-2.1-Sequences/OCPP-2.1-Sequences.md) — Boot, authorization, transactions, V2X, DER control, battery swapping
+- [Smart Charging Deep-Dive](./OCPP-2.1-SmartCharging/OCPP-2.1-SmartCharging.md) — Profile model, composite schedules, V2G, DER, priority charging, AFRR, tariff management
 
 ---
 
