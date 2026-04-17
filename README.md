@@ -94,7 +94,7 @@ Every ambiguous area in the docs is marked:
 
 By default, the agent stops and asks. If you want it to pick reasonable defaults during prototyping, add this to your `CLAUDE.md`:
 
-```.1 or 2
+```
 For OCPP: use pragmatic escalation mode.
 ```
 
